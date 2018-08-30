@@ -1,0 +1,25 @@
+<div *ngIf="message">
+  <label>Título:
+    <input #messageTitle [(ngModel)]="message.title"/>
+  </label>  
+  <br>
+  <br>
+  <label>Contenido:
+    <textarea #messageContent [(ngModel)]="message.content"></textarea>
+  </label>
+  <br>
+  <br>
+  <label>Fecha:
+    <input #messageDate type="date" [ngModel]="message.date | date:'yyyy-MM-dd':'+0000'" (ngModelChange)="message.date = $event"/>
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <br>
+  <br>
+  <button *ngIf="!message_id" (click)="add_update();">
+    Adicionar
+  </button>
+  <button *ngIf="message_id" (click)="add_update();">
+    Actualizar
+  </button>
+  <button (click)="goBack()">Volver</button>
+</div>

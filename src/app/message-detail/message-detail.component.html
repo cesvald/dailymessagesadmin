@@ -1,0 +1,8 @@
+<div *ngIf="message">
+    <label>Mensaje:</label>
+    <input [(ngModel)]="message.content" placeholder= "mensaje">
+<p>
+  {{message.content}}
+</p>
+<button (click)="goBack()">go back</button>
+</div>

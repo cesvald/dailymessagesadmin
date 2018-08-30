@@ -1,0 +1,17 @@
+<h2>Shakti Ma Messages</h2>
+<a routerLink="/messages/new">Nuevo Mensaje</a>
+<table class="table">
+    <tr *ngFor="let message of messages" (click)="onSelect(message)">
+        <td>
+            <a routerLink="/message/{{message._id}}">
+                {{message.content}}
+            </a>
+        </td>
+        <td>
+            <a routerLink="/messages/{{message._id}}/edit">Editar</a>
+        </td>
+        <td>
+            <button class="delete" title="Eliminar" (click)="delete(message)">x</button>
+        </td>
+    </tr>
+</table>
