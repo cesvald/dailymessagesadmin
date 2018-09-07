@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { MessagesComponent } from './messages/messages.component';
-import { MessageDetailComponent } from './message-detail/message-detail.component';
-import { MessageNewComponent } from './message-new/message-new.component';
+import { MessagesComponent } from './messages-components/messages/messages.component';
+import { MessageDetailComponent } from './messages-components/message-detail/message-detail.component';
+import { MessageNewComponent } from './messages-components/message-new/message-new.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [

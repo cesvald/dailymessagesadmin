@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Message } from './message';
+import { Message } from '../models/message';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -13,7 +13,7 @@ export class MessageService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  messagesUrl = 'https://server-shaktima-cesvald.c9users.io/';
+  messagesUrl = 'https://shakti-ma.herokuapp.com/';
   
   constructor( private http: HttpClient ) { }
   
